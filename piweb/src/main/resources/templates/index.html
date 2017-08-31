@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="appCliente">
+	<head>
+		<base href="/" />
+		<meta charset="UTF-8" />
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+		<script src="../js/app.js"></script>
+		<script src="../js/controller/cliente-controller.js"></script>
+		<script src="../js/controller/cidade-controller.js"></script>
+		<script src="../js/controller/estado-controller.js"></script>
+		<script src="../js/controller/main-controller.js"></script>
+		
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css" />
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+		
+		<style type="text/css">
+			 .navbar-header button{
+			 	color: #fff;			 
+			 }
+		</style>
+	</head>
+<body ng-controller="mainController">
+	<header>
+		<nav class="navbar navbar-inverse" >
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					<span class="glyphicon glyphicon-home">
+					</span>
+				</a>
+				<button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse">
+			 	<ul class="nav navbar-nav">
+					<li>
+						<a href="/clientes">Clientes</a>
+					</li>
+					<li>
+						<a href="/cidades">Cidades</a>
+					</li>
+					<li>
+						<a href="/estados">Estados</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div ng-view="ng-view"></div>
+	
+</body>
+</html>
