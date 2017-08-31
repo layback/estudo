@@ -1,0 +1,31 @@
+<div class="col-sm-4" ng-controller="clienteController">
+	<fieldset>
+		<legend class="text-center">Cadastro do cliente</legend>
+		<div class="form-group">
+			<label for="nome">Nome: </label>
+			<input type="text" id="nome" ng-model="cliente.nome" class="form-control"></input>
+		</div>
+		<div class="btn-group">
+			<input class="btn btn-primary btn-sm" type="button" value="Salvar" ng-click="salvarCliente()"></input>
+			<input class="btn btn-primary btn-sm" type="button" value="Cancelar" ng-click="cancelar()"></input>
+		</div>
+	</fieldset>
+	<div style="padding-top:50px;">
+		<fieldset>
+			<legend class="text-center">Lista de clientes</legend>
+			<div class="table-responsive">
+				<table class="table">
+				  <tr ng-repeat="cli in clientes">
+				    <td><label>{{cli.nome}}</label></td>
+						<td>
+							<div class="btn-group">
+						    	<input class="btn btn-primary btn-sm" type="button" value="Alterar" ng-click="alterarCliente(cli)"></input>
+								<input class="btn btn-primary btn-sm" type="button" value="Remover" ng-click="removerCliente(cli)"></input>
+							</div>
+						</td>
+				  </tr>
+				</table>
+			</div>
+		</fieldset>
+	</div>
+</div>
